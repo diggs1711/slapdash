@@ -1,24 +1,32 @@
 import { UDPServer, UDPClient } from '../src'
 
+const PORT = 8080
+const type = 'udp4'
+
 const server = new UDPServer({
-	url: 'localhost:5000'
+	url: 'localhost',
+	family: type,
+	port: PORT
 })
 
 const client = new UDPClient({
-	url: 'localhost:5000'
+	url: 'localhost',
+	family: type,
+	port: PORT
 })
 
 describe('bind()', () => {})
 
 describe('send()', () => {
-	it('should send the message', () => {
+	it('should send the message', (done) => {
 		client.send({
-			event: 'message',
 			message: 'Hello'
 		})
 
 		server.on('message', (msg) => {
+			console.log({ msg })
 			expect(msg).toBe('Hello')
+			done()
 		})
 	})
 })

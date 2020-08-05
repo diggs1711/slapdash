@@ -4,7 +4,8 @@
   "description": "UDP messaging",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc -b"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-typescript": "^7.10.4",
+    "@types/jest": "^26.0.8",
     "babel-jest": "^26.2.2"
   }
 }
