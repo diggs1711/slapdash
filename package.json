@@ -1,0 +1,25 @@
+{
+  "name": "slapdash",
+  "version": "0.0.1",
+  "description": "UDP messaging",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diggs1711/slapdash.git"
+  },
+  "author": "David Higgins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diggs1711/slapdash/issues"
+  },
+  "homepage": "https://github.com/diggs1711/slapdash#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-typescript": "^7.10.4",
+    "babel-jest": "^26.2.2"
+  }
+}
