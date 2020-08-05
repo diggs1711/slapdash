@@ -21,6 +21,12 @@ export default class Server extends EventEmitter {
 		})
 		this.sock.on('message', this.handleMessage.bind(this))
 		this.sock.on('listening', this.handleListening.bind(this))
+		this.sock.on('error', this.handleError.bind(this))
+	}
+
+	handleError(err: Error) {
+		console.error({ err })
+		this.sock.close()
 	}
 
 	handleListening() {
